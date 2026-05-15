@@ -1,0 +1,18 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Publishing artifacts
+assets/
+*.zip
+*.crx
+*.pem
+
+# Logs
+*.log
