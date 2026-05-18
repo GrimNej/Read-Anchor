@@ -1,5 +1,7 @@
 # Read Anchor
 
+<img src="icons/icon128.png" alt="Read Anchor logo" width="64" height="64">
+
 ![Read Anchor Banner](media/banner.png)
 
 > Instantly search the meaning of any word or phrase on the web — without leaving your tab.
