@@ -143,24 +143,24 @@ Read Anchor works on any Chromium-based browser with Manifest V3 support:
 
 ```
 ReadAnchor/
-├── assets/                    # Screenshots and banner images
+├── assets/
 │   ├── banner.png
 │   ├── Selection.png
 │   └── Popup_search.png
 │
-├── icons/                     # Extension icons
+├── icons/
 │   ├── icon16.png
 │   ├── icon48.png
 │   └── icon128.png
 │
-├── manifest.json              # MV3 config, permissions, script registration
-├── background.js              # Service worker — window creation & lifecycle
-├── content.js                 # Content script — selection detection & UI injection
-├── styles.css                 # Scoped floating button styles
+├── manifest.json
+├── background.js
+├── content.js
+├── styles.css
 │
-├── README.md                  # ← You are here
-├── INSTALLATION_GUIDE.md      # Detailed local installation steps
-└── PRIVACY_POLICY.md          # Privacy policy
+├── README.md
+├── INSTALLATION_GUIDE.md
+└── PRIVACY_POLICY.md
 ```
 
 ---
