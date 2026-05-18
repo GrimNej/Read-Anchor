@@ -1,14 +1,6 @@
 # Read Anchor
 
-<!--
-  BANNER IMAGE
-  Dimensions: 1280 x 420 px (or any 3:1 ratio)
-  Content: A clean, wide banner showing the extension name "Read Anchor" in a
-  modern sans-serif font on a soft blue gradient background. Optionally include
-  a small magnifying glass icon or a subtle screenshot of the popup on the right.
-  Place the final image in the repo (e.g., media/banner.png) and update the path below.
--->
-<!-- ![Read Anchor Banner](media/banner.png) -->
+![Read Anchor Banner](media/banner.png)
 
 > Instantly search the meaning of any word or phrase on the web — without leaving your tab.
 
@@ -64,50 +56,13 @@ Popup auto-closes (onFocusChanged listener)
 
 ## Screenshots
 
-<!--
-  SCREENSHOT 1 — The Selection + Button
-  Dimensions: 1280 x 800 px (Chrome Web Store standard) or 800 x 600 px
-  How to capture:
-    1. Go to a clean, well-lit webpage (Wikipedia article or news article).
-    2. Highlight a single word (e.g., "philosophy").
-    3. Wait for the blue "Search" button to appear.
-    4. Use Chrome DevTools → Ctrl+Shift+P → "Capture screenshot" for a clean, UI-free shot.
-    5. Alternatively, use the Snipping Tool / Snip & Sketch with a clean browser window.
-  Place the final image in the repo (e.g., media/screenshot-1.png) and update the path below.
--->
-<!-- ![Highlight text and the Search button appears](media/screenshot-1.png) -->
+### Select any word
 
-<!--
-  SCREENSHOT 2 — The Popup in Action
-  Dimensions: 1280 x 800 px
-  How to capture:
-    1. With the same word highlighted, click the blue "Search" button.
-    2. The popup will open showing Google Search results for "[word] meaning".
-    3. Capture the main browser window + the popup window side-by-side or overlapping.
-    4. Make sure the popup clearly shows Google results (definition card is ideal).
--->
-<!-- ![Popup opens with Google Search results](media/screenshot-2.png) -->
+![Highlight text and the Search button appears](media/screenshot-selection.png)
 
-<!--
-  SCREENSHOT 3 — Clean Auto-Dismiss (Optional but recommended)
-  Dimensions: 1280 x 800 px
-  How to capture:
-    1. Show the main page again after clicking back from the popup.
-    2. This demonstrates that the popup is gone and the user is back to reading.
-    3. A before/after composite image works well here.
--->
-<!-- ![Click back to the page and the popup vanishes](media/screenshot-3.png) -->
+### Search instantly
 
-<!--
-  GIF / DEMO (Highly recommended for GitHub)
-  Dimensions: 800 x 600 px, 5–10 seconds, 15–30 fps
-  How to capture:
-    1. Use ScreenToGif (Windows), LICEcap (cross-platform), or OBS Studio.
-    2. Record the full workflow: highlight word → button appears → click → popup opens → click back → popup closes.
-    3. Keep the recording under 10 MB for fast loading on GitHub.
-  Place the final GIF in the repo (e.g., media/demo.gif) and update the path below.
--->
-<!-- ![Read Anchor demo](media/demo.gif) -->
+![Popup opens with Google Search results](media/screenshot-popup.png)
 
 ---
 
@@ -123,6 +78,7 @@ ReadAnchor/
 │   ├── icon16.png
 │   ├── icon48.png
 │   └── icon128.png
+├── media/                 # Screenshots and banner images
 ├── README.md              # This file
 ├── INSTALLATION_GUIDE.md  # Detailed local installation steps
 └── PRIVACY_POLICY.md      # Privacy policy
@@ -167,26 +123,6 @@ Read Anchor works on any Chromium-based browser with Manifest V3 support:
 See the **[Privacy Policy](PRIVACY_POLICY.md)** for details on how Read Anchor handles user data.
 
 In short: Read Anchor does not collect, store, or transmit any personal data.
-
----
-
-## Visual Assets Checklist
-
-If you want to make this README (and a potential store listing) look polished, create these assets:
-
-| Asset | Dimensions | Purpose |
-|-------|-----------|---------|
-| **Banner** | 1280 x 420 px | README header image. Clean typography on a soft blue gradient. |
-| **Screenshot 1** | 1280 x 800 px | Show text highlighted with the blue "Search" button visible. |
-| **Screenshot 2** | 1280 x 800 px | Show the popup window open with Google Search results. |
-| **Screenshot 3** | 1280 x 800 px | Show the clean page after the popup auto-dismisses. |
-| **Demo GIF** | 800 x 600 px | 5–10 second looping GIF of the full workflow. Highly engaging for GitHub. |
-
-**Where to place them:**
-Create a `media/` folder in the repo root and store all images there. Then uncomment the image lines in this README and update the paths.
-
-**Pro tip for screenshots:**
-Use a clean browser profile with no bookmarks bar and minimal extensions visible. Wikipedia, Medium, or a plain news article make great backdrops. Avoid dark-mode pages unless your button styling is optimized for them.
 
 ---
 
