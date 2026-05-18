@@ -9,7 +9,6 @@ Thumbs.db
 *.swo
 
 # Publishing artifacts
-assets/
 *.zip
 *.crx
 *.pem

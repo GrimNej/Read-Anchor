@@ -2,7 +2,7 @@
 
 <img src="icons/icon128.png" alt="Read Anchor logo" width="64" height="64">
 
-![Read Anchor Banner](media/banner.png)
+![Read Anchor Banner](assets/banner.png)
 
 > Instantly search the meaning of any word or phrase on the web — without leaving your tab.
 
@@ -60,11 +60,11 @@ Popup auto-closes (onFocusChanged listener)
 
 ### Select any word
 
-![Highlight text and the Search button appears](media/screenshot-selection.png)
+![Highlight text and the Search button appears](assets/Selection.png)
 
 ### Search instantly
 
-![Popup opens with Google Search results](media/screenshot-popup.png)
+![Popup opens with Google Search results](assets/Popup_search.png)
 
 ---
 
@@ -80,7 +80,7 @@ ReadAnchor/
 │   ├── icon16.png
 │   ├── icon48.png
 │   └── icon128.png
-├── media/                 # Screenshots and banner images
+├── assets/                # Screenshots and banner images
 ├── README.md              # This file
 ├── INSTALLATION_GUIDE.md  # Detailed local installation steps
 └── PRIVACY_POLICY.md      # Privacy policy
