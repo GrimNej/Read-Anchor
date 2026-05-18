@@ -1,35 +1,94 @@
-# Read Anchor
+<div align="center">
 
-<img src="icons/icon128.png" alt="Read Anchor logo" width="64" height="64">
+![Banner](assets/banner.png)
 
-![Read Anchor Banner](assets/banner.png)
+<br>
 
-> Instantly search the meaning of any word or phrase on the web — without leaving your tab.
+<h1>
+  <img src="icons/icon128.png" alt="Read Anchor" width="64" valign="middle">
+  &nbsp;Read Anchor
+</h1>
 
-**Read Anchor** is a lightweight, privacy-first browser extension for Chromium-based browsers. Highlight any text on any webpage, click the floating **Search** button, and a clean popup window opens right at your cursor with Google Search results. Click back to your page and the popup vanishes automatically.
+**Instantly search the meaning of any word or phrase on the web — without leaving your tab.**
+
+<p>
+  <a href="#"><img src="https://img.shields.io/badge/JavaScript-ES6+-f7df1e.svg?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript ES6+"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Manifest-V3-blue.svg?style=flat-square&logo=googlechrome&logoColor=white" alt="Manifest V3"></a>
+  <a href="#"><img src="https://img.shields.io/badge/platform-Chromium-blue.svg?style=flat-square&logo=google-chrome&logoColor=white" alt="Chromium"></a>
+  <a href="#"><img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat-square" alt="License: MIT"></a>
+  <a href="#"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a>
+</p>
+
+<br>
+
+<img src="assets/Selection.png" alt="Text selection with Search button" width="420">
+
+<br><br>
+
+</div>
 
 ---
 
-## Abstract
+## What is Read Anchor?
 
-Modern reading happens inside the browser. Whether you're researching a paper, learning a new language, or just curious about a word in an article, the friction of copying text, opening a new tab, typing a search query, and finding your way back breaks focus and flow.
+**Read Anchor** is a lightweight, privacy-first browser extension for Chromium-based browsers (Chrome, Brave, Edge). It eliminates the friction of looking up word meanings while you read. Highlight any text on any webpage, click the floating **Search** button, and a clean popup window opens right at your cursor with Google Search results. Click back to your page and the popup vanishes automatically.
 
-Read Anchor eliminates that friction entirely. It lives entirely in your browser, uses zero external dependencies, and sends no data to any third-party server. Your selected text is only used to construct a Google Search URL that opens in a minimal, chromeless popup window. The popup auto-dismisses the moment you click back to the main page, keeping your workspace clean.
-
-Built on **Manifest V3** with vanilla JavaScript, Read Anchor is designed to be fast, unobtrusive, and transparent.
+No tab switching. No copy-pasting. No breaking your flow.
 
 ---
 
-## Installation
+## Features
 
-For detailed, step-by-step installation instructions, see the **[Installation Guide](INSTALLATION_GUIDE.md)**.
+| Feature | Description |
+|---------|-------------|
+| 🔍 **One-Click Lookups** | Highlight text, click Search, get results. No tab switching required. |
+| 🪟 **Clean Popup Windows** | Uses `chrome.windows` API for minimal, address-bar-free popups. |
+| ✨ **Auto-Dismiss** | Popup closes automatically the moment it loses focus. |
+| 🌐 **Works Everywhere** | Runs on any website via `<all_urls>` content script injection. |
+| 🖥️ **Multi-Monitor Aware** | Popup spawns on the correct monitor using global screen coordinates. |
+| 🚫 **Editable-Field Exclusion** | Ignores selections inside inputs, textareas, and `contenteditable` elements. |
+| 🪶 **Lightweight** | Zero external dependencies. Single content script, single service worker, scoped CSS. |
+| 🔒 **Privacy-First** | No data collection, no analytics, no remote servers. |
 
-In short:
-1. Download or clone this repository.
-2. Open your browser's Extensions page (`chrome://extensions/`, `brave://extensions/`, or `edge://extensions/`).
-3. Enable **Developer mode**.
+---
+
+## Screenshots
+
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center">
+      <b>Select any word</b><br><br>
+      <img src="assets/Selection.png" alt="Text selection with Search button" width="360">
+    </td>
+    <td align="center">
+      <b>Search instantly</b><br><br>
+      <img src="assets/Popup_search.png" alt="Popup opens with Google Search results" width="360">
+    </td>
+  </tr>
+</table>
+
+<br>
+
+</div>
+
+---
+
+## Quick Start
+
+### Installation
+
+1. **Download or clone** this repository.
+2. Open your browser and navigate to the Extensions page:
+   - Chrome: `chrome://extensions/`
+   - Brave: `brave://extensions/`
+   - Edge: `edge://extensions/`
+3. Toggle **Developer mode** to ON (top-right corner).
 4. Click **Load unpacked** and select the Read Anchor folder.
 5. Highlight any text on any page and click **Search**.
+
+> 📖 See the full [Installation Guide](INSTALLATION_GUIDE.md) for OS-specific extraction steps, browser-specific guidance, pinning, updating, and troubleshooting.
 
 ---
 
@@ -56,55 +115,15 @@ Popup auto-closes (onFocusChanged listener)
 
 ---
 
-## Screenshots
-
-### Select any word
-
-![Highlight text and the Search button appears](assets/Selection.png)
-
-### Search instantly
-
-![Popup opens with Google Search results](assets/Popup_search.png)
-
----
-
-## File Structure
-
-```
-ReadAnchor/
-├── manifest.json          # MV3 config, permissions, script registration
-├── background.js          # Service worker — window creation & lifecycle
-├── content.js             # Content script — selection detection & UI injection
-├── styles.css             # Scoped floating button styles
-├── icons/
-│   ├── icon16.png
-│   ├── icon48.png
-│   └── icon128.png
-├── assets/                # Screenshots and banner images
-├── README.md              # This file
-├── INSTALLATION_GUIDE.md  # Detailed local installation steps
-└── PRIVACY_POLICY.md      # Privacy policy
-```
-
----
-
-## Permissions
-
-| Permission | Why it's needed |
-|------------|-----------------|
-| `scripting` | Injects the content script that detects text selection and renders the floating button. |
-| `activeTab` | Allows the extension to interact with the current tab when the user initiates a search. |
-
-No browsing history, cookies, or personal data is accessed.
-
----
-
 ## Tech Stack
 
-- **Manifest V3** — Modern Chrome extension standard
-- **Vanilla JavaScript** — No frameworks, no bundlers, no dependencies
-- **`chrome.windows` API** — Native popup window management
-- **Scoped CSS** — All styles isolated to `#lexical-search-btn`
+| Layer | Technology |
+|-------|------------|
+| **Extension Standard** | Manifest V3 |
+| **Language** | Vanilla JavaScript (ES6+) |
+| **Window Management** | `chrome.windows` API |
+| **Styling** | Scoped CSS (`#lexical-search-btn`) |
+| **Dependencies** | None |
 
 ---
 
@@ -120,6 +139,43 @@ Read Anchor works on any Chromium-based browser with Manifest V3 support:
 
 ---
 
+## File Structure
+
+```
+ReadAnchor/
+├── assets/                    # Screenshots and banner images
+│   ├── banner.png
+│   ├── Selection.png
+│   └── Popup_search.png
+│
+├── icons/                     # Extension icons
+│   ├── icon16.png
+│   ├── icon48.png
+│   └── icon128.png
+│
+├── manifest.json              # MV3 config, permissions, script registration
+├── background.js              # Service worker — window creation & lifecycle
+├── content.js                 # Content script — selection detection & UI injection
+├── styles.css                 # Scoped floating button styles
+│
+├── README.md                  # ← You are here
+├── INSTALLATION_GUIDE.md      # Detailed local installation steps
+└── PRIVACY_POLICY.md          # Privacy policy
+```
+
+---
+
+## Permissions
+
+| Permission | Why it's needed |
+|------------|-----------------|
+| `scripting` | Injects the content script that detects text selection and renders the floating button. |
+| `activeTab` | Allows the extension to interact with the current tab when the user initiates a search. |
+
+No browsing history, cookies, or personal data is accessed.
+
+---
+
 ## Privacy
 
 See the **[Privacy Policy](PRIVACY_POLICY.md)** for details on how Read Anchor handles user data.
@@ -130,4 +186,16 @@ In short: Read Anchor does not collect, store, or transmit any personal data.
 
 ## License
 
-MIT
+MIT — see the repository for full license text.
+
+---
+
+<div align="center">
+
+<br>
+
+**Built for readers, by a reader.**
+
+<br>
+
+</div>
